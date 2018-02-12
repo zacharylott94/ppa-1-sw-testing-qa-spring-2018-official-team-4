@@ -1,0 +1,24 @@
+{
+  "name": "life-app",
+  "version": "0.0.1",
+  "description": "Welcome to Software Testing Team 4 repo",
+  "main": "app.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jest": "^22.2.2"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/issues"
+  },
+  "homepage": "https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4#readme"
+}
