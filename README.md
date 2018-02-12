@@ -20,8 +20,9 @@ The Team 4 application tools will help users make simple decisions or calculatio
 
 ## How To Get Started
 1. cd into a chosen directory and run `git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4.git `
-2. run `cd ppa-1-sw-testing-qa-spring-2018-official-team-4`
-3. run `npm install`
+2. Run `cd ppa-1-sw-testing-qa-spring-2018-official-team-4`
+3. Run `npm install` to install dependencies 
+4. To start the application run `node app.js`
 
 ## Class Descriptions
 
