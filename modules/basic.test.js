@@ -151,6 +151,22 @@ test('Multiply -4 * 4 to equal -16', () => {
 test('Multiply 4 * -4 to equal -16', () => {
   expect(multiply(4, -4)).toBe(-16);
 });
+test('throws error on string for both parameters', () => {
+  expect(() => {
+    multiply("string","string");
+  }).toThrow("That isn't a number!");
+});
+test('throws error on string for 1st parameter', () => {
+  expect(() => {
+    multiply("string", 2);
+  }).toThrow("That isn't a number!");
+});
+test('throws error on string for 2nd parameter', () => {
+  expect(() => {
+    multiply(2,"string");
+  }).toThrow("That isn't a number!");
+});
+
 //NOTE: toPrecision is a formatting function thus it will return the calculation as a string
 test('Multiply 3.7 * 4.9 to equal 2e+1 Precision:1', () => {
   var num = multiply(3.7, 4.9)
