@@ -75,3 +75,10 @@ test('throws error on string for both parameters', () => {
 test('Multiply 3 * 3 to equal 9', () => {
   expect(multiply(3, 3)).toBe(9);
 });
+
+//NOTE: toPrecision is a formatting function thus it will return the calculation as a string
+test('Multiply 3.7 * 4.9 to equal 18.13', () => {
+  var num = multiply(3.7, 4.9)
+  var fpp = parseFloat(multiply(3.7, 4.9)).toPrecision(4)
+  expect(fpp).toBe("18.13");
+});
