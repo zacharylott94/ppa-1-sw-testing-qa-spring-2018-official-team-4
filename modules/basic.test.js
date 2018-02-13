@@ -1,6 +1,6 @@
 const add = require('./basic').add
 const divide = require('./basic').divide
-
+const multiply = require('./basic').multiply
 ///Addition
 test('adds 1 + 2 to equal 3', () => {
   expect(add(1, 2)).toBe(3);
@@ -68,4 +68,10 @@ test('throws error on string for both parameters', () => {
   expect(() => {
     divide("string","string");
   }).toThrow("That isn't a number!");
+});
+//end Division 
+
+//Multiplication
+test('Multiply 3 * 3 to equal 9', () => {
+  expect(multiply(3, 3)).toBe(9);
 });
