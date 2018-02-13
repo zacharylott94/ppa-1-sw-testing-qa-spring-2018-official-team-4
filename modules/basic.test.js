@@ -36,6 +36,12 @@ test('throws on string for both parameter', () => {
 test('Divides 2 by 2 to get 1', () => {
   expect(divide(2, 2)).toBe(1);
 });
+test('Divides -2 by 2 to get 1', () => {
+  expect(divide(-2, 2)).toBe(-1);
+});
+test('Divides -2 by -2 to get 1', () => {
+  expect(divide(-2, -2)).toBe(1);
+});
 test('Divides 5.3 by 2.7 to get 1', () => {
   expect(divide(5.3, 2.7)).toBe(1.9629629629629628);
 });
