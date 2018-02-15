@@ -7,7 +7,7 @@ const GRATUITY = .15
 var splitTip = (guest , cost) => { //method declaration
     //unaccaptable values
 if(isNaN(guest) || isNaN(cost)) throw new TypeError("That isn't a number!");
-if(guest <= 0) throw new TypeError("Divide totalTab by zero error");
+if(guest <= 0) throw new TypeError("Divide totalTab by zero error or can't have negative guests!");
 if(cost < 0) throw new TypeError("Cost can't be negative!");
     //core functionality of splitTip
 var totalGratuity = multiply(cost , GRATUITY); // cost of the tab multiplied by const .15
@@ -19,4 +19,5 @@ console.log(splitTab)
 return parseFloat(splitTab).toPrecision(3) //returns 2 decimal places (ex: 1.11)
 }
 
+splitTip(6, 0)
 exports.splitTip = splitTip
