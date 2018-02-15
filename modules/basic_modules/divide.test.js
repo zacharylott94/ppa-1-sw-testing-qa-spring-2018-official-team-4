@@ -16,6 +16,7 @@ test('Divides 2 by 2 to get 1', () => {
   test('Divides 5.3 by 2.7 to get 1.9629629629629628 ', () => {
     expect(divide(5.3, 2.7)).toBe(1.9629629629629628);
   });
+
   
   //NOTE: toPrecision is a formatting function thus it will return the calculation as a string
   test('Divides 5.3 by 2.7 to get 2 Precision:1', () => {
@@ -38,7 +39,17 @@ test('Divides 2 by 2 to get 1', () => {
     var fpp = parseFloat(num).toPrecision(4)
     expect(fpp).toBe( "1.963");
   });
-  
+
+  test('throws divide by zero error', () => {
+    expect(() => {
+      divide(0,0);
+    }).toThrow();
+  });
+  test('throws divide by zero error', () => {
+    expect(() => {
+      divide(5.3,0);
+    }).toThrow();
+  });
   test('throws error on string over zero', () => {
     expect(() => {
       divide("string",0);
