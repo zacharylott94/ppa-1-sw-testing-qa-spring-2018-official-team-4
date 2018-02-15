@@ -1,6 +1,6 @@
 const add = require('./basic_modules/add').add
 const divide= require('./basic_modules/divide').divide
-const multiply = require('./basic_modules/multiply').multiply
+const multiply = require('./basic_modules').multiply
 
 const MCFPOUNDS = 0.45
 
@@ -9,8 +9,7 @@ const MCFPOUNDS = 0.45
 
 //todo test numbers for bmi
 var bmi = (height, weight) => {
-     if(isNaN(x) || isNaN(y)) throw new TypeError("That isn't a number!");
-     
+    if(isNaN(x) || isNaN(y)) throw new TypeError("That isn't a number!");
      var weightToPounds = multiply(weight, MCFPOUNDS)
 
     }
