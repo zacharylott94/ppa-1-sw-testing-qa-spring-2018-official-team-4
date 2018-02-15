@@ -1,4 +1,4 @@
-function email_verifier(email) {
+var email_verifier = (email) => {
 
     //Checks that the input is not nulle
     if(email == null) throw new TypeError("Emails cannot be null!");
@@ -28,7 +28,7 @@ function email_verifier(email) {
     else if(double_period(email) === true) throw new TypeError("Emails cannot contain two consecutive periods");
 
     //Checks that the input does not contain invalid characters
-    else if(invalid_characters(email) !== false) throw new TypeError("Emails cannot contain " + invalid_characters(email));
+    else if(invalid_characters(email) !== false) throw new TypeError(`Emails cannot contain ${invalid_characters(email)}`);
 
     //Checks that the input has a domaim
     else if(email[email.indexOf('@')+1] === undefined) throw new TypeError("Emails must have a domain");
@@ -42,7 +42,7 @@ function email_verifier(email) {
   }
 
 //Converts single character to an integer data type then returns true if it is between 0 and 9 otherwise returns false
-function numeric_character(character){
+var numeric_character = (character) => {
     switch (parseInt(character)) {
         case 0:
             return true;
@@ -70,7 +70,7 @@ function numeric_character(character){
 }
   
 //Locates all @ symbols in a string then return true if that number is greater than 1 otherwise return false
-function double_at(string) {
+var double_at = (string) => {
     var counter = 0;
     for (var i = 0; i < string.length; i++)
     {
@@ -92,7 +92,7 @@ function double_at(string) {
 }
 
 //Locates every . in a string then returns true if the next index is also a . otherwise return false
-function double_period(string) {
+var double_period = (string) => {
     for (var i = 0; i < string.length; i++)
     {
         if (string[i] === '.')
@@ -107,7 +107,7 @@ function double_period(string) {
 }
 
 //Checks a string for " ' # ` ^ if that character is found return that character otherwise return false
-function invalid_characters(string) {
+var invalid_characters = (string) => {
     if (string.indexOf('"') >= 0)
     {
         return '"';
