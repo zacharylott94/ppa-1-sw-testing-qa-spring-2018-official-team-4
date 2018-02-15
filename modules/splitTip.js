@@ -19,6 +19,4 @@ console.log(splitTab)
 return parseFloat(splitTab).toPrecision(3) //returns 2 decimal places (ex: 1.11)
 }
 
-splitTip(5,122.40)
-
 exports.splitTip = splitTip
