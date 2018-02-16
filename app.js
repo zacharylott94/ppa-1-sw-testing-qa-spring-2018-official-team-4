@@ -1,5 +1,6 @@
 var repl = require("repl");
 var prompt = require('prompt');
+var bmi = require('./modules/bmi').bmi
 // var replServer = repl.start({
 //   prompt: "life-app  > What Would you like to use ? \n \n" +
 //   "1. BMI Calculator \n" +
@@ -23,6 +24,23 @@ prompt.start();
 prompt.get(['userChoice'], function (err, result) {
   var choiceArray = ['BMI Calculator 💪', 'Shortest Distance Calculator 🏃', 'Email verifier ✉️', 'Split the Tip Calculator 💵', 'Retirement Calculator 👵' ]
   console.log('Command-line input received:');
-  console.log('  You chose to use: ' + choiceArray[result.userChoice -1]);
+  
+  console.log('  You chose to use: ' + choiceArray[result.userChoice -1])
+  if(result.userChoice == 1){
+    prompt.get([{
+      name: 'userHeight',
+      description: 'Enter your height : ',
+      required: true
+    },{
+      name: 'userWeight',
+      description: 'Enter your weight: ',
+      required: true
+    }], function (err, result) {
+    
+      console.log(bmi(result.userHeight, result.userWeight))
+        
+      
+    });
+  }
   
 });
