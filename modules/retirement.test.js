@@ -11,8 +11,8 @@ describe("retirement function", () =>{
   it('returns at most the age 99', () =>{
     expect(retirement(20,36300,.259,1000000)).toBe(99)
   })
-  it('returns savings "savings goal not met if the goal age is 100 or more"', () =>{
-    expect(retirement(20,36200,.259,1000000)).toBe("Savings goal not met.")
+  it('returns the string "Savings goal not met." if the goal age is 100 or more"', () =>{
+    expect(retirement(20,36200,.259,1000000)).toBe("Savings goal not met.",100)
   })
 
 })
