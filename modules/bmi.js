@@ -46,5 +46,5 @@ var bmi = (height, weight) => {
      
 
     }
-    console.log(bmi("5'3''",130))
+    
 exports.bmi = bmi
