@@ -12,7 +12,7 @@ var prompt = require('prompt');
 // replServer.context.one = "bar";
 
 prompt.start();
- console.log("life-app  > What Would you like to use ? \n \n" +
+ console.log("life-app  > What Would you like to use ? (Put in number of choice) \n \n" +
    "1. BMI Calculator 💪\n" +
    "2. Shortest Distance Calculator 🏃\n" +
    "3. Email verifier ✉️ \n" +
