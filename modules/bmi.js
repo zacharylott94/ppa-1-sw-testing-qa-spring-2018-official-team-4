@@ -1,6 +1,6 @@
 const add = require('./basic_modules/add').add
 const divide= require('./basic_modules/divide').divide
-const multiply = require('./basic_modules').multiply
+const multiply = require('./basic_modules/multiply').multiply
 
 const MCFPOUNDS = 0.45
 
@@ -13,3 +13,4 @@ var bmi = (height, weight) => {
      var weightToPounds = multiply(weight, MCFPOUNDS)
 
     }
+exports.bmi = bmi
