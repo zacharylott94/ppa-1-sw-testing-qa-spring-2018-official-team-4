@@ -1,7 +1,9 @@
-const verifyNumbers = require("./verifyNumbers.js")
 const multiply = require("./multiply").multiply
 function yearlySavings(salary, rate){
-  if (!verifyNumbers(arguments)) {throw new TypeError("Numbers Only")}
+  for (let each in arguments){
+    let value = arguments[each]
+    arguments[each] = Number(value)
+  }
   return multiply(salary,rate)
 }
 

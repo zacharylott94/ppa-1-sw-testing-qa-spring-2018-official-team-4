@@ -76,7 +76,11 @@ prompt.get(['userChoice'], function (err, result) {
       description: 'your retirement savings goal: ',
       required: true
     }], function (err, result){
-      console.log(retirement(result.currentAge,result.salary,result.rate,result.goal))
+      let answer = retirement(result.currentAge,result.salary,result.rate,result.goal)
+      if (typeof answer === "number"){console.log("Your savings goal will be met at age "+ answer + ".")}
+      else{
+        console.log(answer)
+      }
     });
   }
 
