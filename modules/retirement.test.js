@@ -1,4 +1,4 @@
-const retirement = require('./retirement.js')
+const retirement = require('./retirement').retirement
 
 describe("retirement function", () =>{
   it("should accept 4 numbers and only numbers", () => {
