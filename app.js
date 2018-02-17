@@ -1,6 +1,7 @@
 var repl = require("repl");
 var prompt = require('prompt');
 var bmi = require('./modules/bmi').bmi
+var splitTip = require('./modules/splitTip').splitTip
 // var replServer = repl.start({
 //   prompt: "life-app  > What Would you like to use ? \n \n" +
 //   "1. BMI Calculator \n" +
@@ -42,5 +43,18 @@ prompt.get(['userChoice'], function (err, result) {
       
     });
   }
+  if(result.userChoice == 4){
+  prompt.get([{
+    name: 'numGuests',
+    description: 'Enter number of guests: ',
+    require: true
+  },{
+    name: 'numCosts',
+    description: 'Enter cost of meal (gratuity will be added to cost entered): ',
+    required: true
+  }], function (err, result){
+    console.log("The total cost per guest is: ", splitTip(result.numGuests, result.numCosts))
+  });
+  } 
   
 });
