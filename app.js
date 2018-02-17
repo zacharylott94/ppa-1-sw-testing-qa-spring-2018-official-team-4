@@ -15,7 +15,8 @@ var retirement = require('./modules/retirement')
 // replServer.context.one = "bar";
 
 prompt.start();
- console.log("life-app  > What Would you like to use ? (Put in number of choice) \n \n" +
+ console.log("life-app  >  \n" +
+   "0. Exit \n" +
    "1. BMI Calculator 💪\n" +
    "2. Shortest Distance Calculator 🏃\n" +
    "3. Email verifier ✉️ \n" +
@@ -23,7 +24,11 @@ prompt.start();
    "5. Retirement Calculator 👵 \n"
  );
 
-prompt.get(['userChoice'], function (err, result) {
+prompt.get([{
+  name: 'userChoice',
+  description: 'What would you like to use?: ',
+  require: true
+}], function (err, result) {
   var choiceArray = ['BMI Calculator 💪', 'Shortest Distance Calculator 🏃', 'Email verifier ✉️', 'Split the Tip Calculator 💵', 'Retirement Calculator 👵' ]
   console.log('Command-line input received:');
 
@@ -31,11 +36,13 @@ prompt.get(['userChoice'], function (err, result) {
   if(result.userChoice == 1){
     prompt.get([{
       name: 'userHeight',
-      description: 'Enter your height : ',
+      description: 'Enter your height '  + "(5'" + '9")',
+      pattern: /^(\d{1,2})[\']?((\d)|([0-1][0-2]))?[\"]?$/,
       required: true
     },{
       name: 'userWeight',
       description: 'Enter your weight: ',
+      pattern: /^\d+$/,
       required: true
     }], function (err, result) {
 
@@ -83,5 +90,7 @@ prompt.get(['userChoice'], function (err, result) {
       }
     });
   }
+
+ 
 
 });
