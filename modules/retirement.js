@@ -25,4 +25,4 @@ function retirement(age, salary, rate, goal) {
   return answer
 }
 
-module.exports = retirement
+exports.retirement = retirement
