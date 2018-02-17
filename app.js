@@ -2,19 +2,14 @@ var repl = require("repl");
 var prompt = require('prompt');
 var bmi = require('./modules/bmi').bmi
 var splitTip = require('./modules/splitTip').splitTip
-var retirement = require('./modules/retirement')
-// var replServer = repl.start({
-//   prompt: "life-app  > What Would you like to use ? \n \n" +
-//   "1. BMI Calculator \n" +
-//   "2. Shortest Distance Calculator \n" +
-//   "3. Email verifier \n" +
-//   "4. Split the Tip Calculator \n" +
-//   "5. Retirement Calculator \n"
+var retirement = require('./modules/retirement').retirement
+var distance = require('./modules/distance').distance
 
-// });
-// replServer.context.one = "bar";
+
+
 
 prompt.start();
+
  console.log("life-app  >  \n" +
    "0. Exit \n" +
    "1. BMI Calculator 💪\n" +
@@ -23,16 +18,16 @@ prompt.start();
    "4. Split the Tip Calculator 💵 \n" +
    "5. Retirement Calculator 👵 \n"
  );
-
 prompt.get([{
   name: 'userChoice',
-  description: 'What would you like to use?: ',
+  description: 'What would you like to use? ',
   require: true
 }], function (err, result) {
-  var choiceArray = ['BMI Calculator 💪', 'Shortest Distance Calculator 🏃', 'Email verifier ✉️', 'Split the Tip Calculator 💵', 'Retirement Calculator 👵' ]
-  console.log('Command-line input received:');
+  var choiceArray = ['Exit', 'BMI Calculator 💪', 'Shortest Distance Calculator 🏃', 'Email verifier ✉️', 'Split the Tip Calculator 💵', 'Retirement Calculator 👵' ]
+  
 
-  console.log('  You chose to use: ' + choiceArray[result.userChoice -1])
+  console.log('  You chose to use: ' + choiceArray[result.userChoice])
+
   if(result.userChoice == 1){
     prompt.get([{
       name: 'userHeight',
@@ -47,7 +42,7 @@ prompt.get([{
     }], function (err, result) {
 
       console.log(bmi(result.userHeight, result.userWeight))
-
+      result.userChoice = 1;
 
     });
   }
@@ -89,6 +84,32 @@ prompt.get([{
         console.log(answer)
       }
     });
+  }
+  if(result.userChoice == 2){
+    prompt.get([{
+      name: 'x1',
+      description: 'Enter x1 ',
+      required: true
+    },{
+      name: 'y1',
+      description: 'Enter y1 ',
+      required: true
+    },{
+      name: 'x2',
+      description: 'Enter x2 ',
+      required: true
+    },{
+      name: 'y2',
+      description: 'Enter y2 ',
+      required: true
+    }], function (err, result){
+      console.log("The distance between the two points is " + parseFloat(distance(result.x1, result.y1, result.x2, result.y2)).toPrecision(2) )
+      
+    });
+  }
+  if(result.userChoice == 0){
+    console.log("Bye!!!")
+    prompt.stop();
   }
 
  
