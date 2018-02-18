@@ -18,17 +18,17 @@ var output = [];
 
 //where your questions would go
 var bmiQuestions = [{
-    
+
     type: 'input',
     name: 'userHeight',
     message: "What's your height? " + "5'" +'11"'
-  
+
 },{
-    
+
     type: 'input',
     name: 'userWeight',
     message: "What's your weight?"
-  
+
 }
 ];
 
@@ -68,32 +68,32 @@ var questions = [
           'Exit'
         ]
       }
-  
+
 ];
 
-function ask() {
+var ask = () => {
   inquirer.prompt(questions).then(answers => {
     output.push(answers.theme);
     if(answers.theme == "1. BMI Calculator 💪"){
         askBmi()
     }
-    if(answers.theme == "4. Split the Tip Calculator 💵"){
-      askTip()
-  }
-    
+    if(answers.theme == "5. Retirement Calculator 👵"){
+      askRetirement()
+    }
+
   });
 }
-function askExit() {
+var askExit = () => {
     inquirer.prompt(askToExit).then(answers => {
      if(answers.askAgain){
          ask()
      }
-      
-      
+
+
     });
   }
 
-function askBmi(){
+var askBmi = () => {
     inquirer.prompt(bmiQuestions).then(answers => {
         console.log(bmi(answers.userHeight,answers.userWeight));
         askExit();
@@ -106,5 +106,42 @@ var askTip = () => {
     askExit();
   });
 };
+
+ask();
+var retirementQuestions = [{
+
+    type: 'input',
+    name: 'age',
+    message: "What's your current age? "
+
+},{
+
+    type: 'input',
+    name: 'salary',
+    message: "What's your salary?"
+
+},{
+
+    type: 'input',
+    name: 'rate',
+    message: "What percent of your salary do you save?"
+
+},{
+
+    type: 'input',
+    name: 'goal',
+    message: "What is your savings goal?"
+
+}]
+
+var askRetirement = () => {
+    inquirer.prompt(retirementQuestions).then(answers => {
+        let answer = retirement(answers.age,answers.salary,answers.rate,answers.goal)
+        if (typeof answer === "number"){console.log("You will reach your savings goal by age " + answer + ".")}
+        else{console.log(answer)}
+
+        askExit();
+      });
+}
 
 ask();
