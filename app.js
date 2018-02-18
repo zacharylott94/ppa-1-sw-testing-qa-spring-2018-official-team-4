@@ -1,3 +1,6 @@
+'use strict';
+
+var inquirer = require('./node_modules/inquirer');
 var repl = require("repl");
 var prompt = require('prompt');
 var bmi = require('./modules/bmi').bmi
@@ -8,110 +11,77 @@ var distance = require('./modules/distance').distance
 
 
 
-prompt.start();
 
- console.log("life-app  >  \n" +
-   "0. Exit \n" +
-   "1. BMI Calculator 💪\n" +
-   "2. Shortest Distance Calculator 🏃\n" +
-   "3. Email verifier ✉️ \n" +
-   "4. Split the Tip Calculator 💵 \n" +
-   "5. Retirement Calculator 👵 \n"
- );
-prompt.get([{
-  name: 'userChoice',
-  description: 'What would you like to use? ',
-  require: true
-}], function (err, result) {
-  var choiceArray = ['Exit', 'BMI Calculator 💪', 'Shortest Distance Calculator 🏃', 'Email verifier ✉️', 'Split the Tip Calculator 💵', 'Retirement Calculator 👵' ]
+
+
+var output = [];
+
+//where your questions would go
+var bmiQuestions = [{
+    
+    type: 'input',
+    name: 'userHeight',
+    message: "What's your height? " + "5'" +'11"'
   
+},{
+    
+    type: 'input',
+    name: 'userWeight',
+    message: "What's your weight?"
+  
+}
+];
+//ask to exit prompt
+var askToExit = [{
+    type: 'confirm',
+    name: 'askAgain',
+    message: 'Would you want to use another tool? (just hit enter for YES)?',
+    default: true
+  }]
 
-  console.log('  You chose to use: ' + choiceArray[result.userChoice])
-
-  if(result.userChoice == 1){
-    prompt.get([{
-      name: 'userHeight',
-      description: 'Enter your height '  + "(5'" + '9")',
-      pattern: /^(\d{1,2})[\']?((\d)|([0-1][0-2]))?[\"]?$/,
-      required: true
-    },{
-      name: 'userWeight',
-      description: 'Enter your weight: ',
-      pattern: /^\d+$/,
-      required: true
-    }], function (err, result) {
-
-      console.log(bmi(result.userHeight, result.userWeight))
-      result.userChoice = 1;
-
-    });
-  }
-  if(result.userChoice == 4){
-  prompt.get([{
-    name: 'numGuests',
-    description: 'Enter number of guests: ',
-    require: true
-  },{
-    name: 'numCosts',
-    description: 'Enter cost of meal (gratuity will be added to cost entered): ',
-    required: true
-  }], function (err, result){
-    console.log("The total cost per guest is: ", splitTip(result.numGuests, result.numCosts))
-  });
-  }
-
-  if(result.userChoice == 5){
-    prompt.get([{
-      name: 'currentAge',
-      description: 'Enter your current age: ',
-      required: true
-    },{
-      name: 'salary',
-      description: 'your annual salary: ',
-      required: true
-    },{
-      name: 'rate',
-      description: 'the percent of your salary that you save: ',
-      required: true
-    },{
-      name: 'goal',
-      description: 'your retirement savings goal: ',
-      required: true
-    }], function (err, result){
-      let answer = retirement(result.currentAge,result.salary,result.rate,result.goal)
-      if (typeof answer === "number"){console.log("Your savings goal will be met at age "+ answer + ".")}
-      else{
-        console.log(answer)
+  //general questions
+var questions = [
+    {
+        type: 'list',
+        name: 'theme',
+        message: 'What would you like to use?',
+        choices: [
+            "1. BMI Calculator 💪",
+            "2. Shortest Distance Calculator 🏃",
+            "3. Email verifier ✉️",
+            "4. Split the Tip Calculator 💵",
+            "5. Retirement Calculator 👵",
+          new inquirer.Separator(),
+          'Exit'
+        ]
       }
-    });
-  }
-  if(result.userChoice == 2){
-    prompt.get([{
-      name: 'x1',
-      description: 'Enter x1 ',
-      required: true
-    },{
-      name: 'y1',
-      description: 'Enter y1 ',
-      required: true
-    },{
-      name: 'x2',
-      description: 'Enter x2 ',
-      required: true
-    },{
-      name: 'y2',
-      description: 'Enter y2 ',
-      required: true
-    }], function (err, result){
-      console.log("The distance between the two points is " + parseFloat(distance(result.x1, result.y1, result.x2, result.y2)).toPrecision(2) )
+  
+];
+
+function ask() {
+  inquirer.prompt(questions).then(answers => {
+    output.push(answers.theme);
+    if(answers.theme == "1. BMI Calculator 💪"){
+        askBmi()
+    }
+    
+  });
+}
+function askExit() {
+    inquirer.prompt(askToExit).then(answers => {
+     if(answers.askAgain){
+         ask()
+     }
+      
       
     });
   }
-  if(result.userChoice == 0){
-    console.log("Bye!!!")
-    prompt.stop();
-  }
 
- 
+function askBmi(){
+    inquirer.prompt(bmiQuestions).then(answers => {
+        console.log(bmi(answers.userHeight,answers.userWeight));
+        askExit();
+      });
+}
 
-});
+ask();
