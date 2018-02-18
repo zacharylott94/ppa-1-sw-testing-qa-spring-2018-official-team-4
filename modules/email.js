@@ -1,40 +1,40 @@
 var email_verifier = (email) => {
 
     //Checks that the input is not nulle
-    if(email == null) throw new TypeError("Emails cannot be null!");
+    if(email == null) throw new TypeError("INVALID: Emails cannot be null!");
 
     //Checks that the input is a sring type
-    else if(typeof(email) !== 'string') throw new TypeError("Emails must be a string!");
+    else if(typeof(email) !== 'string') throw new TypeError("INVALID: Emails must be a string!");
 
     //Checks that the input contains '@'
-    else if(email.indexOf('@') === -1) throw new TypeError("Emails must contain the @ symbol!");
+    else if(email.indexOf('@') === -1) throw new TypeError("INVALID: Emails must contain the @ symbol!");
 
     //Checks that the input does not contain two '@' symbols
-    else if(double_at(email) === true) throw new TypeError("Emails must cannot contain two @ symbols!");
+    else if(double_at(email) === true) throw new TypeError("INVALID: Emails must cannot contain two @ symbols!");
       
     //Checks that the input does not start with '.'
-    else if(email[0] === '.') throw new TypeError("Emails cannot begin with a .");
+    else if(email[0] === '.') throw new TypeError("INVALID: Emails cannot begin with a .");
 
     //Checks that the input does not start with a numeric character
-    else if(numeric_character(email[0]) === true) throw new TypeError("Emails cannot start with a numeric character");
+    else if(numeric_character(email[0]) === true) throw new TypeError("INVALID: Emails cannot start with a numeric character");
 
     //Checks that the input does not end with '.'
-    else if(email[email.length-1] === '.') throw new TypeError("Emails cannot end with a .");
+    else if(email[email.length-1] === '.') throw new TypeError("INVALID: Emails cannot end with a .");
 
-     //Checks that the string before @ does not end with '.'
-     else if(email[email.indexOf('@')-1] === '.') throw new TypeError("Emails cannot have a period right before the @ symbol");
+    //Checks that the string before @ does not end with '.'
+    else if(email[email.indexOf('@')-1] === '.') throw new TypeError("INVALID: Emails cannot have a . right before the @ symbol");
 
     //Checks that the input have two consecutive periods '..'
-    else if(double_period(email) === true) throw new TypeError("Emails cannot contain two consecutive periods");
+    else if(double_period(email) === true) throw new TypeError("INVALID: Emails cannot contain two consecutive periods");
 
     //Checks that the input does not contain invalid characters
-    else if(invalid_characters(email) !== false) throw new TypeError(`Emails cannot contain ${invalid_characters(email)}`);
+    else if(invalid_characters(email) !== false) throw new TypeError(`INVALID: Emails cannot contain the ${invalid_characters(email)} symbol`);
 
     //Checks that the input has a domaim
-    else if(email[email.indexOf('@')+1] === undefined) throw new TypeError("Emails must have a domain");
+    else if(email[email.indexOf('@')+1] === undefined) throw new TypeError("INVALID: Emails must have a domain");
 
     //Checks that the input must have text before the @ symbol
-    else if(email[email.indexOf('@')-1] === undefined) throw new TypeError("Emails must include text before @");
+    else if(email[email.indexOf('@')-1] === undefined) throw new TypeError("INVALID: Emails must include text before @");
 
     else{
         return true;

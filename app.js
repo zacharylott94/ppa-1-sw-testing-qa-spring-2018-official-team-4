@@ -6,6 +6,7 @@ var prompt = require('prompt');
 var bmi = require('./modules/bmi').bmi
 var splitTip = require('./modules/splitTip').splitTip
 var retirement = require('./modules/retirement').retirement
+var email_verifier = require('./modules/email')
 var distance = require('./modules/distance').distance
 
 
@@ -92,6 +93,25 @@ var splitTipQuestions = [
     message: "Enter cost of meal (gratuity will be added to cost entered)"
   }
 ];
+var splitTipQuestions = [
+{
+  type: 'input',
+  name: 'numGuests',
+  message: "Enter number of guests"
+},
+{
+  type: 'input',
+  name: 'numCosts',
+  message: "Enter cost of meal (gratuity will be added to cost entered)"
+}
+];
+var emailVerifierQuestions = [
+  {
+  type: 'input',
+  name: 'email',
+  message: "Please enter an email: "
+  },
+];
 
   //general questions
 var questions = [
@@ -102,7 +122,7 @@ var questions = [
         choices: [
             "1. BMI Calculator 💪",
             "2. Shortest Distance Calculator 🏃",
-            "3. Email verifier ✉️",
+            "3. Email Verifier ✉️",
             "4. Split the Tip Calculator 💵",
             "5. Retirement Calculator 👵",
           new inquirer.Separator(),
@@ -130,6 +150,9 @@ var ask = () => {
     }
     if(answers.theme == "2. Shortest Distance Calculator 🏃"){
       askSd();
+    }
+    if(answers.theme == "3. Email Verifier ✉️"){
+      askEmail();
     }
     if(answers.theme == "4. Split the Tip Calculator 💵"){
       askTip();
@@ -160,6 +183,12 @@ var askSd = () => {
       askExit();
     });
 }
+var askEmail = () => {
+  inquirer.prompt(emailVerifierQuestions).then(answers => {
+    try {console.log("It is ", email_verifier(answers.email), " that this email is valid.")} catch (e) {console.log(e.message);}
+    askExit();
+  });
+};
 var askTip = () => {
   inquirer.prompt(splitTipQuestions).then(answers => {
 
