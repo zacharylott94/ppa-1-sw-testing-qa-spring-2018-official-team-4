@@ -3,8 +3,8 @@ const splitTip = require('./splitTip').splitTip
 
 test('5 people splitting a 23.23 cost', () => {
   var num = splitTip(2, 100)
-  var fpp = parseFloat(num).toPrecision(3)
-  expect(fpp).toBe("5.34");
+  var fpp = parseFloat(num).toFixed(2)
+  expect(fpp).toBe("57.50");
 });
 
 
