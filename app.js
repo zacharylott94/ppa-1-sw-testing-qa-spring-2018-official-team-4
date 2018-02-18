@@ -31,6 +31,19 @@ var bmiQuestions = [{
   
 }
 ];
+
+var splitTipQuestions = [
+  {
+    type: 'input',
+    name: 'numGuests',
+    message: "Enter number of guests"
+  },
+  {
+    type: 'input',
+    name: 'numCosts',
+    message: "Enter cost of meal (gratuity will be added to cost entered)"
+  }
+];
 //ask to exit prompt
 var askToExit = [{
     type: 'confirm',
@@ -64,6 +77,9 @@ function ask() {
     if(answers.theme == "1. BMI Calculator 💪"){
         askBmi()
     }
+    if(answers.theme == "4. Split the Tip Calculator 💵"){
+      askTip()
+  }
     
   });
 }
@@ -83,5 +99,12 @@ function askBmi(){
         askExit();
       });
 }
+
+var askTip = () => {
+  inquirer.prompt(splitTipQuestions).then(answers => {
+    console.log("The total cost per guest is: ", splitTip(answers.numGuests, answers.numCost))
+    askExit();
+  });
+};
 
 ask();
