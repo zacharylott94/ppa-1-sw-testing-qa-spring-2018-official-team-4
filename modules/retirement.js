@@ -4,12 +4,13 @@ const divide = require(modules + "divide").divide
 const add = require(modules + "add").add
 const multiply = require(modules + "multiply").multiply
 
-function retirement(age, salary, rate, goal) {
-  for (let each in arguments){
-    let value = arguments[each]
-    arguments[each] = Number(value)
-  }
-  
+let retirement = (age, salary, rate, goal) => {
+
+  age = Number(age)
+  salary = Number(salary)
+  rate = Number(rate)
+  goal = Number(goal)
+
   if (rate >= 1){throw new Error("Savings rate cannot be greater than or equal to 1. Please use a decimal.")}
   if (rate <= 0){throw new Error("Savings rate cannot be less than or equal to zero.")}
   if (age < 16){throw new Error("Current age must be 16 or greater.")}
