@@ -1,7 +1,12 @@
 const splitTip = require('./splitTip').splitTip
-  test('integers entered only', () => {
-    expect(splitTip(5, 23)).toBe("5.29");
-  });
+ //NOTE: toPrecision is a formatting function thus it will return the calculation as a string
+
+test('5 people splitting a 23.23 cost', () => {
+  var num = splitTip(2, 100)
+  var fpp = parseFloat(num).toPrecision(3)
+  expect(fpp).toBe("5.34");
+});
+
 
   test('passing integer to guest parameter', () => {
     expect(() => {
