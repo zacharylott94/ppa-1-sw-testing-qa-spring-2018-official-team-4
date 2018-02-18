@@ -3,6 +3,21 @@
   "version": "0.0.1",
   "description": "Welcome to Software Testing Team 4 repo",
   "main": "app.js",
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!app.js",
+      "!**/lcov-report/**",
+      "!prettify.js",
+      "!sorter.js"
+    ],
+    "coverageDirectory": "./"
+
+  },
   "dependencies": {
     "prompt": "^1.0.0"
   },
