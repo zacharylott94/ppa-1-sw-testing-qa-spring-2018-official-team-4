@@ -26,6 +26,10 @@ The Team 4 application tools will help users make simple decisions or calculatio
 5. To test the application, run 'npm test'
 6. To make the testing framework watch changes, run 'npm test -- --watchAll'
 
+## Testing Coverage
+1. Run `npm test` to generate a coverage folder
+2. To see output run in command line or open lcov-report/index.html in a web browser
+
 ## Class Descriptions
 
 ## Programming Language
