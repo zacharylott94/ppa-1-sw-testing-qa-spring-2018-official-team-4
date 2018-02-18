@@ -38,3 +38,9 @@ We will be programming in JavaScript
 ## Testing Framework
 We are using Jest as our testing framework. It contains a test runner and an assertion library.
 
+## Screencasts:
+1. RGR screencasts:
+    - https://drive.google.com/open?id=1AXhzgZYhnpe1zVcerDUGkh8qrYyVyGnm done by [Jacob Stewart](https://github.com/JacobStewart20)
+    - https://drive.google.com/open?id=1VtT4ifxjyFGc_-yPc2i_LdYv40jgmhSP done by [Will Lee](https://github.com/henryjr1)
+2. All 5 functions: 
+    - 

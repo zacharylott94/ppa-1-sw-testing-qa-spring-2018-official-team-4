@@ -7,7 +7,7 @@ test('throws on number for the parameter', () => {
   });
 
 test('Expects 5 to be in first index', () => {
-    expect(parse("5'9''")[1]).toBe(5);
+    expect(parse("5'"+'9"')[1]).toBe(5);
   });
 
 

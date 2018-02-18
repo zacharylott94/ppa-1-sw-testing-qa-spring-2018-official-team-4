@@ -12,7 +12,7 @@ var distance = (x1,y1,x2,y2) => {
     y = multiply(y, y);
 
     shortestDistance = add(x,y);
-    return Math.sqrt(shortestDistance);
+    return (Number(Math.sqrt(shortestDistance)).toFixed(4))/1;
 }
 
 exports.distance = distance
