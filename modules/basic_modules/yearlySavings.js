@@ -1,9 +1,7 @@
 const multiply = require("./multiply").multiply
-function yearlySavings(salary, rate){
-  for (let each in arguments){
-    let value = arguments[each]
-    arguments[each] = Number(value)
-  }
+let yearlySavings = (salary, rate) => {
+  salary = Number(salary)
+  rate = Number(rate)
   return multiply(salary,rate)
 }
 
