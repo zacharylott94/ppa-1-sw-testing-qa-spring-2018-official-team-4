@@ -14,7 +14,7 @@ var totalGratuity = multiply(cost , GRATUITY); // cost of the tab multiplied by 
 var totalTab= add(cost , totalGratuity) // total cost plus gratuity(.15)
 var splitTab = divide(totalTab , guest) // total cost/# of guests
 
-return parseFloat(splitTab).toPrecision(3) //returns 2 decimal places (ex: 1.11)
+return splitTab //returns 2 decimal places (ex: 1.11)
 }
 
 exports.splitTip = splitTip

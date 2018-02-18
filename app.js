@@ -83,11 +83,13 @@ var splitTipQuestions = [
   {
     type: 'input',
     name: 'numGuests',
+    type: Number,
     message: "Enter number of guests"
   },
   {
     type: 'input',
     name: 'numCosts',
+    type: Number,
     message: "Enter cost of meal (gratuity will be added to cost entered)"
   }
 ];
@@ -189,7 +191,8 @@ var askEmail = () => {
 };
 var askTip = () => {
   inquirer.prompt(splitTipQuestions).then(answers => {
-    console.log("The total cost per guest is: ", splitTip(answers.numGuests, answers.numCosts))
+
+    console.log("The total cost per guest is: ", parseFloat(splitTip(Number(answers.numGuests), Number(answers.numCosts))).toFixed(2))
     askExit();
   });
 };
