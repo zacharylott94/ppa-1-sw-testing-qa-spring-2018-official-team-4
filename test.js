@@ -1,19 +1,11 @@
+/**
+ * Recursive prompt example
+ * Allows user to choose when to exit prompt
+ */
+
 'use strict';
-
 var inquirer = require('./node_modules/inquirer');
-var repl = require("repl");
-var prompt = require('prompt');
 var bmi = require('./modules/bmi').bmi
-var splitTip = require('./modules/splitTip').splitTip
-var retirement = require('./modules/retirement').retirement
-var distance = require('./modules/distance').distance
-
-
-
-
-
-
-
 var output = [];
 
 //where your questions would go
