@@ -16,9 +16,9 @@
       "!sorter.js"
     ],
     "coverageDirectory": "./"
-
   },
   "dependencies": {
+    "inquirer": "^5.1.0",
     "prompt": "^1.0.0"
   },
   "devDependencies": {
