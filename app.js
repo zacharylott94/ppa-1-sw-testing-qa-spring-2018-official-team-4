@@ -173,26 +173,26 @@ var askExit = () => {
 
 var askBmi = () => {
     inquirer.prompt(bmiQuestions).then(answers => {
-        console.log(bmi(answers.userHeight,answers.userWeight));
+        console.log(`${bmi(answers.userHeight,answers.userWeight)}`);
         askExit();
       });
 }
 var askSd = () => {
   inquirer.prompt(shortDistanceQuestions).then(answers => {
-      console.log("The distance between the points is " + parseFloat(distance(answers.x1, answers.y1, answers.x2, answers.y2)).toPrecision(2));
+      console.log(`The distance between the points is ${parseFloat(distance(answers.x1, answers.y1, answers.x2, answers.y2)).toPrecision(2)}`);
       askExit();
     });
 }
 var askEmail = () => {
   inquirer.prompt(emailVerifierQuestions).then(answers => {
-    try {console.log("It is ", email_verifier(answers.email), " that this email is valid.")} catch (e) {console.log(e.message);}
+    try {console.log(`It is ${email_verifier(answers.email)} that this email is valid.`)} catch (e) {console.log(`${e.message}`);}
     askExit();
   });
 };
 var askTip = () => {
   inquirer.prompt(splitTipQuestions).then(answers => {
 
-    console.log("The total cost per guest is: ", parseFloat(splitTip(Number(answers.numGuests), Number(answers.numCosts))).toFixed(2))
+    console.log(`The total cost per guest is: ${parseFloat(splitTip(Number(answers.numGuests), Number(answers.numCosts))).toFixed(2)}`)
     askExit();
   });
 };
@@ -200,7 +200,7 @@ var askTip = () => {
 var askRetirement = () => {
     inquirer.prompt(retirementQuestions).then(answers => {
         let answer = retirement(answers.age,answers.salary,answers.rate,answers.goal)
-        if (typeof answer === "number"){console.log("You will reach your savings goal by age " + answer + ".")}
+        if (typeof answer === "number"){console.log(`You will reach your savings goal by age ${answer}.`)}
         else{console.log(answer)}
 
         askExit();
