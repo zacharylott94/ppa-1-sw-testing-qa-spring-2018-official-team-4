@@ -23,7 +23,7 @@ The Team 4 application tools will help users make simple decisions or calculatio
 2. Run `cd ppa-1-sw-testing-qa-spring-2018-official-team-4`
 3. Run `npm install` to install dependencies
 4. To start the application run `node app.js`
-5. To test the application, run 'npm test'
+5. To test the application, run `npm test`
 6. To make the testing framework watch changes, run 'npm test -- --watchAll'
 
 ## Testing Coverage
