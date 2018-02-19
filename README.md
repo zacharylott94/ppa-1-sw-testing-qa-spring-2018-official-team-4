@@ -30,8 +30,6 @@ The Team 4 application tools will help users make simple decisions or calculatio
 1. Run `npm test` to generate a coverage folder
 2. To see output run in command line or open lcov-report/index.html in a web browser
 
-## Class Descriptions
-
 ## Programming Language
 We will be programming in JavaScript
 
@@ -43,4 +41,4 @@ We are using Jest as our testing framework. It contains a test runner and an ass
     - https://drive.google.com/open?id=1AXhzgZYhnpe1zVcerDUGkh8qrYyVyGnm done by [Jacob Stewart](https://github.com/JacobStewart20)
     - https://drive.google.com/open?id=1VtT4ifxjyFGc_-yPc2i_LdYv40jgmhSP done by [Will Lee](https://github.com/henryjr1)
 2. All 5 functions: 
-    - 
+    - https://drive.google.com/file/d/1rILuZDhjKHcUdBkYC5K0BwBw85oiOpoQ/view?usp=sharing
