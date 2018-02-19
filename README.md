@@ -24,7 +24,7 @@ The Team 4 application tools will help users make simple decisions or calculatio
 3. Run `npm install` to install dependencies
 4. To start the application run `node app.js`
 5. To test the application, run `npm test`
-6. To make the testing framework watch changes, run 'npm test -- --watchAll'
+6. To make the testing framework watch changes, run `npm test -- --watchAll`
 
 ## Testing Coverage
 1. Run `npm test` to generate a coverage folder
