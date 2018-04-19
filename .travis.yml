@@ -16,7 +16,7 @@ deploy:
   no_promote: true
   skip_cleanup: true
   on:
-    repo: https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/tree/tmp_branch
+    repo: https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/tree/
     branches:  
       only:     
         - tmp_branch
