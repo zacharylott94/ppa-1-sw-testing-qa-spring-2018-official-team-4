@@ -5,3 +5,8 @@ branches:
   only:
   - master
   - dev
+  - tmp_branch
+deploy:
+  provider: gae
+  keyfile: "YOUR SERVICE ACCOUNT JSON FILE"
+  project: "YOUR PROJECT ID"
