@@ -138,4 +138,4 @@ var invalid_characters = (string) => {
     }
 }
 
-module.exports = email_verifier;
+exports.email_verifier = email_verifier;
