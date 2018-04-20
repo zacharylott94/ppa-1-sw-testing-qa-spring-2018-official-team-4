@@ -40,8 +40,8 @@ Vue.component('bmi',{
   template:`
     <div>
       <h3>BMI Calculator</h3>
-      <input type="text" placeholder="height" v-model='height'>
-      <input type="text" placeholder="weight" v-model='weight'>
+      <input type="text" placeholder="height as 5'10'' format" v-model='height'>
+      <input type="text" placeholder="weight in pounds" v-model='weight'>
       <p>Result: {{result}}</p>
       <button @click=calculateBMI>Calculate</button>
       </div>
