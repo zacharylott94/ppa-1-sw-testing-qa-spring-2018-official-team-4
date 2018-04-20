@@ -1,4 +1,4 @@
-const email_verifier = require('./email');
+const email_verifier = require('./email').email_verifier;
 
 test('throws error if input is null', () => {
     expect(() => {

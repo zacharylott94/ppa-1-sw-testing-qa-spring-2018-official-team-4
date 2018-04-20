@@ -1,8 +1,7 @@
-
 const yearlySavings = require("./basic_modules/yearlySavings")
-const divide = require("./basic_modules/divide").divide
-const add = require("./basic_modules/add").add
-const multiply = require("./basic_modules/multiply").multiply
+const add = require('./basic_modules/add').add
+const divide= require('./basic_modules/divide').divide
+const multiply = require('./basic_modules/multiply').multiply
 
 let retirement = (age, salary, rate, goal) => {
 
