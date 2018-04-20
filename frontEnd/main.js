@@ -1,7 +1,7 @@
 //This does Vue stuff
 Vue.component('retirement',{
   template: `
-    <div>
+    <div class='container'>
       <h3>Retirement Calculator</h3>
       <input type="text" placeholder="Age" v-model='age'>
       <input type="text" placeholder="Salary" v-model='salary'>
@@ -38,13 +38,13 @@ Vue.component('retirement',{
 
 Vue.component('bmi',{
   template:`
-    <div>
+    <div class='container'>
       <h3>BMI Calculator</h3>
       <input type="text" placeholder="height as 5'10'' format" v-model='height'>
       <input type="text" placeholder="weight in pounds" v-model='weight'>
       <p>Result: {{result}}</p>
       <button @click=calculateBMI>Calculate</button>
-      </div>
+    </div>
   `,
   data() {
     return {
@@ -68,16 +68,32 @@ Vue.component('bmi',{
 
 new Vue({
   el:'#root',
+  template:`
+    <div class="app">
+      <header>
+        <button class="button" @click='show("retirement")'>Retirement Calculator</button>
+        <button class="button" @click='show("bmi")'>BMI Calculator</button>
+      </header>
+      <retirement v-show="components.retirement"></retirement>
+      <bmi v-show="components.bmi"> </bmi>
+    </div>
+  `,
   data: {
-    retirement: {
-      age: '',
-      salary: '',
-      rate: '',
-      goal: '',
-      result: ''
+    components:{
+      retirement:true,
+      bmi:false
     }
   },
-  methods: {
 
+
+  methods: {
+    show(component) {
+      console.log(component)
+      for (let each of Object.keys(this.components)){
+        this.components[each] = false
+      }
+      this.components[component] = true
+    }
   }
+
 })
