@@ -133,6 +133,35 @@ Vue.component('email', {
   }
 })
 
+Vue.component('split',{
+    template:`
+      <div class="container">
+        <h3>Tip Split Calculator</h3>
+        <input type="text" placeholder="Number of Guests" v-model='guests' />
+        <input type="text" placeholder="Total Cost" v-model='cost' />
+        <p>Each person pays: {{result}}</p>
+        <button class="button" @click=calculate>Calculate!</button>
+      </div>
+    `,
+    data() {
+      return {
+        guests: '',
+        cost: '',
+        result: ''
+      }
+    },
+    methods: {
+      calculate() {
+        try{
+          this.result = bundle.splitTip(this.guests,this.cost)
+        }
+        catch(err){
+          this.result = String(err)
+        }
+      }
+    }
+  })
+
 new Vue({
   el:'#root',
   data: {
@@ -141,6 +170,7 @@ new Vue({
       bmi:false,
       distance:false,
       email:false,
+      split:false,
     }
   },
 
