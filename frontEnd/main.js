@@ -65,30 +65,57 @@ Vue.component('bmi',{
   }
 })
 
+Vue.component('distance', {
+  template:`
+    <div class='container'>
+      <h3>Distance Calculator</h3>
+      <input type="text" placeholder="X1" v-model="X1" />
+      <input type="text" placeholder="y1" v-model="Y1" />
+      <input type="text" placeholder="X2" v-model="X2" />
+      <input type="text" placeholder="Y2" v-model="Y2" />
+      <p>The distance is: {{result}}</p>
+      <button class="button" @click=calculate>Calculate!</button>
+    </div>
+  `,
+  data() {
+    return {
+      X1: '',
+      Y1: '',
+      X2: '',
+      Y2: '',
+      result: '',
+    }
+  },
+  methods: {
+    calculate() {
+      try{
+        this.result = bundle.distance(
+          this.X1,
+          this.Y1,
+          this.X2,
+          this.Y2
+        )
+      }
+      catch(err){
+        this.result = String(err)
+      }
+    }
+  }
+})
 
 new Vue({
   el:'#root',
-  template:`
-    <div class="app">
-      <header>
-        <button class="button" @click='show("retirement")'>Retirement Calculator</button>
-        <button class="button" @click='show("bmi")'>BMI Calculator</button>
-      </header>
-      <retirement v-show="components.retirement"></retirement>
-      <bmi v-show="components.bmi"> </bmi>
-    </div>
-  `,
   data: {
     components:{
       retirement:true,
-      bmi:false
+      bmi:false,
+      distance:false,
     }
   },
 
 
   methods: {
     show(component) {
-      console.log(component)
       for (let each of Object.keys(this.components)){
         this.components[each] = false
       }
