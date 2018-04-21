@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.7/dist/mini-default.min.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <button class="button" @click='show("retirement")'>Retirement Calculator</button>
+        <button class="button" @click='show("bmi")'>BMI Calculator</button>
+        <button class="button" @click='show("distance")'>Distance Calculator</button>
+        <button class="button" @click='show("email")'>Email Verifier</button>
+        <button class="button" @click='show("split")'>Tip Split Calculator</button>
+      </header>
+      <retirement v-show="components.retirement"></retirement>
+      <bmi v-show="components.bmi"> </bmi>
+      <distance v-show="components.distance"> </distance>
+      <email v-show="components.email"> </email>
+      <split v-show="components.split"> </split>
+    </div>
+  </body>
+
+
+  <script src="https://unpkg.com/vue@2.5.16/dist/vue.js" charset="utf-8"></script>
+  <script src="./bundle.js" charset="utf-8"></script>
+  <script src="./main.js" charset="utf-8"></script>
+
+</html>
