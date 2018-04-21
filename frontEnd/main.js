@@ -103,6 +103,36 @@ Vue.component('distance', {
   }
 })
 
+Vue.component('email', {
+  template:`
+    <div class="container">
+      <h3>Email Verifier</h3>
+      <input type="text" placeholder='email@address.com' v-model='email' />
+      <p>{{result}}</p>
+      <button class="button" @click=calculate>Calculate!</button>
+    </div>
+  `,
+  data() {
+    return {
+      email: '',
+      result: ''
+    }
+  },
+  methods: {
+    calculate() {
+      try{
+        this.result = bundle.email(this.email)
+        if (this.result) {
+          this.result = "This is a valid email address."
+        }
+      }
+      catch(err){
+        this.result = String(err)
+      }
+    }
+  }
+})
+
 new Vue({
   el:'#root',
   data: {
@@ -110,6 +140,7 @@ new Vue({
       retirement:true,
       bmi:false,
       distance:false,
+      email:false,
     }
   },
 
