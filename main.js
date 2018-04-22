@@ -90,10 +90,10 @@ Vue.component('distance', {
     calculate() {
       try{
         this.result = bundle.distance(
-          this.X1,
-          this.Y1,
-          this.X2,
-          this.Y2
+          Number(this.X1),
+          Number(this.Y1),
+          Number(this.X2),
+          Number(this.Y2)
         )
       }
       catch(err){
@@ -153,7 +153,8 @@ Vue.component('split',{
     methods: {
       calculate() {
         try{
-          this.result = bundle.splitTip(this.guests,this.cost)
+          this.result = bundle.splitTip(Number(this.guests),
+                                        Number(this.cost))
         }
         catch(err){
           this.result = String(err)
