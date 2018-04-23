@@ -28,7 +28,7 @@
     "jest": "^22.3.0"
   },
   "scripts": {
-    "test": "jest && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "test": "jest && cat lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
