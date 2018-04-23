@@ -16,7 +16,8 @@
       "!sorter.js",
       "!bundle.js",
       "!server.js",
-      "!main.js"
+      "!main.js",
+      "!imports.js"
     ],
     "coverageDirectory": "./"
   },
