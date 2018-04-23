@@ -17,7 +17,6 @@ deploy:
   keyfile: "PPA2-app-2abc80ee29ef.json"
   project: "ppa2-app"
   version: "development"
-  skip_cleanup: true
   on:
    branch: dev
   
