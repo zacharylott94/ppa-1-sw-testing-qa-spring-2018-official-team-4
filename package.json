@@ -13,7 +13,10 @@
       "!app.js",
       "!**/lcov-report/**",
       "!prettify.js",
-      "!sorter.js"
+      "!sorter.js",
+      "!bundle.js",
+      "!server.js",
+      "!main.js"
     ],
     "coverageDirectory": "./"
   },
