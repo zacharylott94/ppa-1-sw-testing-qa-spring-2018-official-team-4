@@ -8,7 +8,7 @@ only:
 deploy:
   provider: gae
   keyfile: "PPA2-app-2abc80ee29ef.json"
-  project: "PPA2-app"
+  project: "ppa2-app"
   version: "production"
 before_install:
 - openssl aes-256-cbc -K $encrypted_191cc3c8a684_key -iv $encrypted_191cc3c8a684_iv
