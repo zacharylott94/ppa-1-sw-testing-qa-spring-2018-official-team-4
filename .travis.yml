@@ -6,17 +6,18 @@ only:
 - master
 - dev
 deploy:
-  skip_cleanup: true
-  provider: gae
+- provider: gae
   keyfile: "PPA2-app-2abc80ee29ef.json"
   project: "ppa2-app"
   version: "production"
+  skip_cleanup: true
   on:
    branch: master
-  provider: gae
+- provider: gae
   keyfile: "PPA2-app-2abc80ee29ef.json"
   project: "ppa2-app"
   version: "development"
+  skip_cleanup: true
   on:
    branch: dev
   
