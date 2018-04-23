@@ -24,10 +24,11 @@
     "serve-static": "^1.13.2"
   },
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "jest": "^22.3.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
