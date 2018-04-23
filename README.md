@@ -1,7 +1,8 @@
 # ppa-1-sw-testing-qa-spring-2018-official-team-4
 Welcome to Software Testing Team 4 repo
 
-[![Coverage Status](https://coveralls.io/repos/github/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/badge.svg)](https://coveralls.io/github/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4)[![Build Status](https://travis-ci.org/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4.svg?branch=master)](https://travis-ci.org/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4)
+[![Coverage Status](https://coveralls.io/repos/github/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/badge.svg)](https://coveralls.io/github/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4)
+[![Build Status](https://travis-ci.org/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4.svg?branch=master)](https://travis-ci.org/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4)
 
 ### Team Members
 * [Will Lee](https://github.com/henryjr1)
