@@ -33,6 +33,8 @@ The Team 4 application tools will help users make simple decisions or calculatio
 1. Run `npm test` to generate a coverage folder
 2. To see output, run in command line or open lcov-report/index.html in a web browser
 
+## Setup and Execution Instructions
+
 ## Programming Language
 We will be programming in JavaScript
 
