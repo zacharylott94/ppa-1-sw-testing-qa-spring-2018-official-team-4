@@ -30,7 +30,8 @@
   "devDependencies": {
     "browserify": "^16.2.0",
     "coveralls": "^3.0.0",
-    "jest": "^22.3.0"
+    "jest": "^22.3.0",
+    "vue": "^2.5.16"
   },
   "scripts": {
     "test": "jest && cat lcov.info | ./node_modules/coveralls/bin/coveralls.js"
