@@ -1,4 +1,5 @@
 //This does Vue stuff
+const Vue = bundle.Vue
 Vue.component('retirement',{
   template: `
     <div class='container'>
