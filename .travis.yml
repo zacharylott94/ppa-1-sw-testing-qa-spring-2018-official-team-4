@@ -11,9 +11,8 @@ deploy:
   project: "ppa2-app"
   no_promote: true
   version: "production"
-  before_script: NODE_ENV=production browserify imports.js --standalone bundle -o bundle.js
+  before_script: NODE_ENV=production browserify -g envify imports.js --standalone bundle -o bundle.js
   skip_cleanup: true
-
   on:
    branch: master
 - provider: gae
