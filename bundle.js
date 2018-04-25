@@ -1,24 +1,32 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.bundle = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.bundle = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+
+module.exports.bmi = require('./modules/bmi').bmi
+module.exports.splitTip = require('./modules/splitTip').splitTip
+module.exports.distance = require('./modules/distance').distance
+module.exports.email = require('./modules/email').email_verifier
+module.exports.retirement = require('./modules/retirement').retirement
+
+},{"./modules/bmi":8,"./modules/distance":9,"./modules/email":10,"./modules/retirement":11,"./modules/splitTip":12}],2:[function(require,module,exports){
 var add = (x,y) => {
     if(isNaN(x) || isNaN(y)) throw new TypeError("That isn't a number!");
     return x + y;
     }
     exports.add = add
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 var divide = (x,y) => {
     if(isNaN(x) || isNaN(y)) throw new TypeError("That isn't a number!");
     if(!y) throw new Error('Invalid dividend ' + y);
     return (x / y);
 }
 exports.divide = divide
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 var multiply = (x,y) => {
     if(isNaN(x) || isNaN(y)) throw new TypeError("That isn't a number!");
     return x * y;
 }
 
 exports.multiply = multiply
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 var parse = (feetAndInches) => {
     if (typeof feetAndInches !== "string") throw new TypeError("That isn't a string!");
     
@@ -35,13 +43,13 @@ var parse = (feetAndInches) => {
     
 }
 exports.parse = parse
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 var subtract = (x,y) => {
     if(isNaN(x) || isNaN(y)) throw new TypeError("That isn't a number!");
     return x - y;
     }
     exports.subtract = subtract
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 const multiply = require("./multiply").multiply
 let yearlySavings = (salary, rate) => {
   salary = Number(salary)
@@ -51,7 +59,7 @@ let yearlySavings = (salary, rate) => {
 
 module.exports = yearlySavings
 
-},{"./multiply":3}],7:[function(require,module,exports){
+},{"./multiply":4}],8:[function(require,module,exports){
 const add = require('./basic_modules/add').add
 const divide= require('./basic_modules/divide').divide
 const multiply = require('./basic_modules/multiply').multiply
@@ -102,22 +110,7 @@ var bmi = (height, weight) => {
     }
     
 exports.bmi = bmi
-},{"./basic_modules/add":1,"./basic_modules/divide":2,"./basic_modules/multiply":3,"./basic_modules/parse":4,"lodash":13}],8:[function(require,module,exports){
-const bmi = require('./bmi')
-const distance = require('./distance')
-const email = require('./email')
-const retirement = require('./retirement')
-const splitTip = require('./splitTip')
-
-module.exports = {
-  bmi: bmi.bmi,
-  distance: distance.distance,
-  email: email,
-  retirement: retirement.retirement,
-  splitTip: splitTip.splitTip
-}
-
-},{"./bmi":7,"./distance":9,"./email":10,"./retirement":11,"./splitTip":12}],9:[function(require,module,exports){
+},{"./basic_modules/add":2,"./basic_modules/divide":3,"./basic_modules/multiply":4,"./basic_modules/parse":5,"lodash":13}],9:[function(require,module,exports){
 const subtract = require('./basic_modules/subtract').subtract
 const multiply = require('./basic_modules/multiply').multiply
 const add = require('./basic_modules/add').add
@@ -136,7 +129,7 @@ var distance = (x1,y1,x2,y2) => {
 }
 
 exports.distance = distance
-},{"./basic_modules/add":1,"./basic_modules/multiply":3,"./basic_modules/subtract":5}],10:[function(require,module,exports){
+},{"./basic_modules/add":2,"./basic_modules/multiply":4,"./basic_modules/subtract":6}],10:[function(require,module,exports){
 var email_verifier = (email) => {
 
     //Checks that the input is not nulle
@@ -277,14 +270,13 @@ var invalid_characters = (string) => {
     }
 }
 
-module.exports = email_verifier;
+exports.email_verifier = email_verifier;
 
 },{}],11:[function(require,module,exports){
-
 const yearlySavings = require("./basic_modules/yearlySavings")
-const divide = require("./basic_modules/divide").divide
-const add = require("./basic_modules/add").add
-const multiply = require("./basic_modules/multiply").multiply
+const add = require('./basic_modules/add').add
+const divide= require('./basic_modules/divide').divide
+const multiply = require('./basic_modules/multiply').multiply
 
 let retirement = (age, salary, rate, goal) => {
 
@@ -310,7 +302,7 @@ let retirement = (age, salary, rate, goal) => {
 
 exports.retirement = retirement
 
-},{"./basic_modules/add":1,"./basic_modules/divide":2,"./basic_modules/multiply":3,"./basic_modules/yearlySavings":6}],12:[function(require,module,exports){
+},{"./basic_modules/add":2,"./basic_modules/divide":3,"./basic_modules/multiply":4,"./basic_modules/yearlySavings":7}],12:[function(require,module,exports){
     //basic_module calls
 const divide = require('./basic_modules/divide').divide
 const add = require('./basic_modules/add').add
@@ -331,7 +323,7 @@ return splitTab //returns 2 decimal places (ex: 1.11)
 }
 
 exports.splitTip = splitTip
-},{"./basic_modules/add":1,"./basic_modules/divide":2,"./basic_modules/multiply":3}],13:[function(require,module,exports){
+},{"./basic_modules/add":2,"./basic_modules/divide":3,"./basic_modules/multiply":4}],13:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -17432,5 +17424,5 @@ exports.splitTip = splitTip
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[8])(8)
+},{}]},{},[1])(1)
 });
