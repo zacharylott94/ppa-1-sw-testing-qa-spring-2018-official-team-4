@@ -11,6 +11,7 @@ deploy:
   project: "ppa2-app"
   no_promote: true
   version: "production"
+  before_script: NODE_ENV=production browserify imports.js --standalone bundle -o bundle.js
   skip_cleanup: true
 
   on:
@@ -28,9 +29,3 @@ deploy:
 before_install:
 - openssl aes-256-cbc -K $encrypted_191cc3c8a684_key -iv $encrypted_191cc3c8a684_iv
   -in PPA2-app-2abc80ee29ef.json.enc -out PPA2-app-2abc80ee29ef.json -d
-
-if: branch = master
-before_script: NODE_ENV=production browserify imports.js --standalone bundle -o bundle.js
-
-if: branch = dev
-before_script: browserify imports.js --standalone bundle -o bundle.js
