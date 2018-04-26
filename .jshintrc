@@ -1,0 +1,10 @@
+{
+	"bitwise": true, // Prohibits bitwise operators (ex: &, | instead of &&, ||)
+	"curly": false, // Flags loops/conditionals that don't have brackets (even ones with only one line)
+    "undef": false,	// Flags undefined variables
+    "unused": false, // Flags unused variables
+    "devel": true, // Checks for console.log alerts
+    "esversion":6,
+    "asi" : true,
+    "eqnull":true
+}
