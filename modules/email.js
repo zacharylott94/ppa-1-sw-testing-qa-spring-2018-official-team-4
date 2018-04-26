@@ -1,7 +1,8 @@
 var email_verifier = (email) => {
 
     //Checks that the input is not nulle
-    if(email == null) throw new TypeError("INVALID: Emails cannot be null!");
+    if(email == null)
+		throw new TypeError("INVALID: Emails cannot be null!");
 
     //Checks that the input is a sring type
     else if(typeof(email) !== 'string') throw new TypeError("INVALID: Emails must be a string!");
