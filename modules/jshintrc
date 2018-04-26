@@ -1,7 +1,0 @@
-{
-	"bitwise": true, // Prohibits bitwise operators (ex: &, | instead of &&, ||)
-	"curly": true, // Flags loops/conditionals that don't have brackets (even ones with only one line)
-    "undef": true,	// Flags undefined variables
-    "unused": true, // Flags unused variables
-	"devel": true // Checks for console.log alerts
-}
