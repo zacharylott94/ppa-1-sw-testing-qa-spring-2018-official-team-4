@@ -25,7 +25,7 @@ The Team 4 application tools will help users make simple decisions or calculatio
 1. cd into a chosen directory and run `git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4.git `
 2. Run `cd ppa-1-sw-testing-qa-spring-2018-official-team-4`
 3. Run `npm install` to install dependencies
-4. To start the application run `node app.js`
+4. To start the command line application run `node app.js` to start the web interface run `node server.js`
 5. To test the application, run `npm test`
 6. To make the testing framework watch changes, run `npm test -- --watchAll`
 
@@ -34,6 +34,35 @@ The Team 4 application tools will help users make simple decisions or calculatio
 2. To see output, run in command line or open lcov-report/index.html in a web browser
 
 ## Setup and Execution Instructions
+
+### How to contribute
+1. Clone this repo (see [How To Get Started](#how-to-get-started))
+2. Make a new feature branch locally with naming scheme "f/(nameofyourbranch)
+3. Add files, commit your changes and push to create your new branch on Github
+4. Your feature will be reviewed and merged with Dev if accepted
+
+### Using Travis CI
+1. Make sure you have the `.travis.yml` file in your repo
+2. If you are wanting a development build, push new changes into `dev` branch
+3. If you are wanting a production build, push new changes into `master` branch
+4. To see build output go here -> [Travis CI Builds for PPA-Team-4](https://travis-ci.org/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4)
+5. Builds can also be restarted by clicking on 'Restart build' on the Travis Build page
+6. Custom builds can also be triggered within Travis CI, just click on 'More options' then 'Trigger build'. 
+
+The `.travis.yml` contains all logic for running a build. Which includes what branchs to build on, specific [Browserify](http://browserify.org/) commands to run on the Javascript and deployment pipelines to execute with taking in account the branch being pushed to. See [Customizing the Build] (https://docs.travis-ci.com/user/customizing-the-build) for more information on using Travis CI
+
+## Basic Usage with Google Cloud Platform / Google App Engine
+1. Ensure that you have the appropriate permissions to access the platform (ask [Dillon Carley](https://github.com/Dilloncarley) to request these permissions)
+2. To run commands on your project: Click on the 'Activate Google Cloud Shell' button at the top of the page
+   This shell has access to the project files and hosting commands see [Cloud Shell](https://cloud.google.com/shell/) for      more information.
+
+## Accessing product versions on Google App Engine 
+1. Make sure you are logged in with the correct permissions and go here -> [Google App Engine Versions](https://console.cloud.google.com/appengine/versions?project=ppa2-app&serviceId=default&versionssize=50)
+
+This page will show active/non-active versions of the product. The production version that is being served is the site that will be theoretically served to the general public/customers, while the development version will only be accessed by developers and testers on the team. 
+
+For more information on Google Cloud Platform go here -> [Google Cloud Platform](https://cloud.google.com/)
+For more information on Google App Engine go here -> [Google App Engine](https://cloud.google.com/appengine/)
 
 ## Programming Language
 We will be programming in JavaScript
