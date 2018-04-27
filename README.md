@@ -51,12 +51,12 @@ The Team 4 application tools will help users make simple decisions or calculatio
 
 The `.travis.yml` contains all logic for running a build. Which includes what branchs to build on, specific [Browserify](http://browserify.org/) commands to run on the Javascript and deployment pipelines to execute with taking in account the branch being pushed to. See [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) for more information on using Travis CI
 
-## Basic Usage with Google Cloud Platform / Google App Engine
+### Basic Usage with Google Cloud Platform / Google App Engine
 1. Ensure that you have the appropriate permissions to access the platform (ask [Dillon Carley](https://github.com/Dilloncarley) to request these permissions)
 2. To run commands on your project: Click on the 'Activate Google Cloud Shell' button at the top of the page
    This shell has access to the project files and hosting commands see [Cloud Shell](https://cloud.google.com/shell/) for      more information.
 
-## Accessing product versions on Google App Engine 
+### Accessing product versions on Google App Engine 
 1. Make sure you are logged in with the correct permissions and go here -> [Google App Engine Versions](https://console.cloud.google.com/appengine/versions?project=ppa2-app&serviceId=default&versionssize=50)
 
 This page will show active/non-active versions of the product. The production version that is being served is the site that will be theoretically served to the general public/customers, while the development version will only be accessed by developers and testers on the team. 
