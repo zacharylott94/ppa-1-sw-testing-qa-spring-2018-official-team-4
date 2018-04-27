@@ -17,7 +17,7 @@ let retirement = (age, salary, rate, goal) => {
   if (salary < 0){throw new Error("Salary must not be less than zero.")}
   if (goal <= 0){throw new Error("Savings goal must not be less than or equal to zero.")}
 
-  let adjustedRate = add(rate,(multiply(rate,.35)))
+  let adjustedRate = add(rate,(multiply(rate,0.35)))
   let years = divide(goal,yearlySavings(salary,adjustedRate))
   years = Math.ceil(years)
   let answer = add(years,age)

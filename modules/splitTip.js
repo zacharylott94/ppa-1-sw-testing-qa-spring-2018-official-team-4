@@ -2,7 +2,7 @@
 const divide = require('./basic_modules/divide').divide
 const add = require('./basic_modules/add').add
 const multiply = require('./basic_modules/multiply').multiply
-const GRATUITY = .15
+const GRATUITY = 0.15
 
 var splitTip = (guest , cost) => { //method declaration
     //unacceptable entries
