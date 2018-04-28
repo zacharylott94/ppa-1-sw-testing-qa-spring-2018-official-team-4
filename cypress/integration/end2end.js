@@ -1,7 +1,16 @@
+var cyHost;
+if(process.env.NODE_ENV == "production"){
+        cyHost = 'https://production-dot-ppa2-app.appspot.com/'
+}else if(process.env.NODE_ENV == "development"){
+    cyHost = 'https://development-dot-ppa2-app.appspot.com/'
+}else{
+       cyHost = 'http://localhost:8080/'
+   }
+
 describe('Navigation test', function(){
     it('Tests the ability to move beteween calculators', function(){
         // -visit the page
-        cy.visit('http://localhost:8080/')
+        cy.visit(cyHost);
         // - navigate to correct page
         cy.get('button').contains('BMI').click()
         cy.get('button').contains('Distance').click()
@@ -13,7 +22,7 @@ describe('Navigation test', function(){
 describe('Retirement page test', function(){
     it('Test retirement function', function(){
         // -visit the page
-        cy.visit('http://localhost:8080/')
+        cy.visit(cyHost);
         // - navigate to correct page
         cy.get('button').contains('Retirement').click()
         // - fill input bars
@@ -29,7 +38,7 @@ describe('Retirement page test', function(){
 describe('BMI page test', function(){
     it('Test retirement function', function(){
         // -visit the page
-        cy.visit('http://localhost:8080/')
+        cy.visit(cyHost);
         // - navigate to correct page
         cy.get('button').contains('BMI').click()
         // - fill input bars
@@ -43,7 +52,7 @@ describe('BMI page test', function(){
 describe('Distance page test', function(){
     it('Test retirement function', function(){
         // -visit the page
-        cy.visit('http://localhost:8080/')
+        cy.visit(cyHost);
         // - navigate to correct page
         cy.get('button').contains('Distance').click()
         // - fill input bars
@@ -59,7 +68,7 @@ describe('Distance page test', function(){
 describe('Email page test', function(){
     it('Test retirement function', function(){
         // -visit the page
-        cy.visit('http://localhost:8080/')
+        cy.visit(cyHost);
         // - navigate to correct page
         cy.get('button').contains('Email').click()
         // - fill input bars
@@ -72,7 +81,7 @@ describe('Email page test', function(){
 describe('Tip Split page test', function(){
     it('Test retirement function', function(){
         // -visit the page
-        cy.visit('http://localhost:8080/')
+        cy.visit(cyHost);
         // - navigate to correct page
         cy.get('button').contains('Tip').click()
         // - fill input bars
