@@ -71,9 +71,11 @@ For more information on Google App Engine go here -> [Google App Engine](https:/
 -	JSHint runs before the Unit Tests, on Line 30 of .travis.yml
 -	If any warnings are raised, the pipeline will fail the build.
 -	Setup Instructions:
-		1. Installation: Run `npm install --save jshint` in the main directory to install JSHint locally.
-		2. Configuration: Set up rules for warnings in file .jshintrc file in main directory. Documentation for   		     rules found here: "http://jshint.com/docs/options/"
-		3. Use: Run `jshint .` in a directory to analyze all modules within that directory and its sub-directories.
+	1. Installation: Run `npm install --save jshint` in the main directory to install JSHint locally.
+
+	2. Configuration: Set up rules for warnings in file .jshintrc file in main directory. Documentation for   		     rules found here: "http://jshint.com/docs/options/"
+
+	3. Use: Run `jshint .` in a directory to analyze all modules within that directory and its sub-directories.
 
 
 ## Programming Language
