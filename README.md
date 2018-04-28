@@ -35,14 +35,14 @@ The Team 4 application tools will help users make simple decisions or calculatio
 
 ## Setup and Execution Instructions
 
-## Static Testing with JSHint
--	JSHint performs static analysis on JavaScript modules and prints a list of warning for potential defects.
--	JSHint runs before the Unit Tests, on Line 30 of .travis.yml
--	If any warnings are raised, the pipeline will fail the build.
--	Setup Instructions:
-	1. Installation:	Run "npm install --save jshint" in the main directory to install JSHint locally.
-	2. Configuration:	Set up rules for warnings in file .jshintrc file in main directory. Documentation for rules found here: "http://jshint.com/docs/options/"
-	3. Use:				Run "jshint ." in a directory to analyze all modules within that directory and its sub-directories.
+-	Static Testing with JSHint
+	-	JSHint performs static analysis on JavaScript modules and prints a list of warning for potential defects.
+	-	JSHint runs before the Unit Tests, on Line 30 of .travis.yml
+	-	If any warnings are raised, the pipeline will fail the build.
+	-	Setup Instructions:
+		1. Installation:	Run "npm install --save jshint" in the main directory to install JSHint locally.
+		2. Configuration:	Set up rules for warnings in file .jshintrc file in main directory. Documentation for rules found here: "http://jshint.com/docs/options/"
+		3. Use:				Run "jshint ." in a directory to analyze all modules within that directory and its sub-directories.
 
 ## Programming Language
 We will be programming in JavaScript
