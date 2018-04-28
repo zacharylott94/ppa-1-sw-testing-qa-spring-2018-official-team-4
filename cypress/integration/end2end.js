@@ -1,12 +1,13 @@
 var cyHost;
-if(process.env.NODE_ENV == "production"){
+
+//set vars for production or developement
+if(Cypress.env('env') == "production"){
         cyHost = 'https://production-dot-ppa2-app.appspot.com/'
-}else if(process.env.NODE_ENV == "development"){
+}else if(Cypress.env('env') == "development"){
     cyHost = 'https://development-dot-ppa2-app.appspot.com/'
 }else{
        cyHost = 'http://localhost:8080/'
    }
-
 describe('Navigation test', function(){
     it('Tests the ability to move beteween calculators', function(){
         // -visit the page
