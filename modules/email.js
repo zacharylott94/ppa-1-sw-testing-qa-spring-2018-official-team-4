@@ -34,9 +34,6 @@ var email_verifier = (email) => {
     //Checks that the input has a domaim
     else if(email[email.indexOf('@')+1] === undefined) throw new TypeError("INVALID: Emails must have a domain");
 
-    //Checks that the input must have text before the @ symbol
-    else if(email[email.indexOf('@')-1] === undefined) throw new TypeError("INVALID: Emails must include text before @");
-
     else{
         return true;
     }
