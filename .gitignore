@@ -2,4 +2,3 @@ node_modules
 lcov-report
 .DS_Store
 bundle.js
-cypress/videos
