@@ -30,3 +30,5 @@ before_script:
   - jshint modules/. 
   - if [ "$TRAVIS_BRANCH" = "dev" ]; then browserify imports.js --standalone bundle -o bundle.js; fi
   - if [ "$TRAVIS_BRANCH" = "master" ]; then NODE_ENV=production browserify -g envify imports.js --standalone bundle -o bundle.js; fi
+
+after_deploy: npx cypress run
