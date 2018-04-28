@@ -17,7 +17,9 @@
       "!bundle.js",
       "!server.js",
       "!main.js",
-      "!imports.js"
+      "!imports.js",
+      "!**/cypress/**",
+      "!.jshintrc"
     ],
     "coverageDirectory": "./"
   },
@@ -32,6 +34,8 @@
     "coveralls": "^3.0.0",
     "envify": "^4.1.0",
     "jest": "^22.3.0",
+    "jshint": "^2.9.5",
+    "npx": "^10.2.0",
     "vue": "^2.5.16"
   },
   "scripts": {

@@ -60,7 +60,7 @@ test('Shortest Distance with ', () => {
   expect(distance(1.53566,0,-4.1432,5.4453482372)).toEqual(7.8677);
 });
 test('Shortest Distance', () => {
-  var num = distance(-3,.2,0,-3)
+  var num = distance(-3,0.2,0,-3)
   var fpp = parseFloat(num).toPrecision(2)
   expect(fpp).toEqual("4.4")
 });
