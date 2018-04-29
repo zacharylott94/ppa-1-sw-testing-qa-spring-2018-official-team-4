@@ -51,6 +51,17 @@ The Team 4 application tools will help users make simple decisions or calculatio
 
 The `.travis.yml` contains all logic for running a build. Which includes what branchs to build on, specific [Browserify](http://browserify.org/) commands to run on the Javascript and deployment pipelines to execute with taking in account the branch being pushed to. See [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) for more information on using Travis CI
 
+### Using Cypress
+Cypress is an all-in-one end-to end testing tool used for this project. The steps to implement are as followed:
+1. Be sure to 'npm install' after pulling repository to install all modules for cypress.
+2. Navigate to the main project directory.
+3. Start your local server with the project you want to test.
+4. Cypress can be run through the browser or headlessly.
+5. To run through in the broswer, after your server has been started run 'npx cypress open' in your command line.
+6. To run headlessly, run 'npx cypress run' in your command line.
+
+Both through the browser and headlessly, Cypress will then display the test that were ran, and whether they passed or failed. The broswer version of Cypress will also implement a live and interactive preview of the app being tested.
+
 ### Basic Usage with Google Cloud Platform / Google App Engine
 1. Ensure that you have the appropriate permissions to access the platform (ask [Dillon Carley](https://github.com/Dilloncarley) to request these permissions)
 2. To run commands on your project: Click on the 'Activate Google Cloud Shell' button at the top of the page
