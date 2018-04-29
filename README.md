@@ -88,6 +88,8 @@ For more information on Google App Engine go here -> [Google App Engine](https:/
 
 	3. Use: Run `jshint .` in a directory to analyze all modules within that directory and its sub-directories.
 
+### Deploying the application
+Host a web server with index.html, bundle.js, and main.js in the root.
 
 ## Programming Language
 We will be programming in JavaScript
