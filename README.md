@@ -53,7 +53,7 @@ The `.travis.yml` contains all logic for running a build. Which includes what br
 
 ### Using Cypress
 Cypress is an all-in-one end-to end testing tool used for this project. The steps to implement are as followed:
-1. Be sure to 'npm install' after pulling repository to install all modules for cypress.
+1.  Be sure to 'npm install' after pulling repository to install all modules for cypress.
 2. Navigate to the main project directory.
 3. Start your local server with the project you want to test.
 4. Cypress can be run through the browser or headlessly.
