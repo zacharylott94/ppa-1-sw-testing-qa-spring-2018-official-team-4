@@ -21,6 +21,12 @@ Welcome to Software Testing Team 4 repo
 ## Introduction
 The Team 4 application tools will help users make simple decisions or calculations. Such as a BMI calculator, a retirement savings goal, shortest distance calculator, an email verifier, and splitting a dinner tab calulator. The application will be using the JavaScript language and Jest for testing.
 
+## Live websites
+
+ - [Production](https://production-dot-ppa2-app.appspot.com/)
+
+ - [Staging](https://development-dot-ppa2-app.appspot.com/)
+
 ## How To Get Started
 1. cd into a chosen directory and run `git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4.git `
 2. Run `cd ppa-1-sw-testing-qa-spring-2018-official-team-4`
@@ -100,6 +106,7 @@ We will be programming in JavaScript
 We are using Jest as our testing framework. It contains a test runner and an assertion library.
 ## Report 
 - https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/Report/PPA%2%Report.pdf
+
 ## Screencasts:
 
 
