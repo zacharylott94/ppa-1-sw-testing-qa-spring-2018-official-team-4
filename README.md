@@ -1,13 +1,20 @@
-# ppa-1-sw-testing-qa-spring-2018-official-team-4
-Welcome to Software Testing Team 4 repo
+# ppa-sw-testing-qa-spring-2018-official-team-4
+Welcome to Software Testing Team 4 Repo 
 
 [![Coverage Status](https://coveralls.io/repos/github/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/badge.svg)](https://coveralls.io/github/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4)
 [![Build Status](https://travis-ci.org/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4.svg?branch=master)](https://travis-ci.org/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4)
 
-### Team Members
+### PPA-1 Team Members
 * [Will Lee](https://github.com/henryjr1)
 * [Damon Stamps](https://github.com/DStampsJr)
 * [Jacob Stewart](https://github.com/JacobStewart20)
+* [Zach Lott](https://github.com/zkl6)
+* [Dillon Carley](https://github.com/Dilloncarley)
+
+### PPA-2 Team Members
+* [Will Lee](https://github.com/henryjr1)
+* [Damon Stamps](https://github.com/DStampsJr)
+* [Britt Faulkner](https://github.com/brittf)
 * [Zach Lott](https://github.com/zkl6)
 * [Dillon Carley](https://github.com/Dilloncarley)
 
@@ -105,7 +112,7 @@ We will be programming in JavaScript
 ## Testing Framework
 We are using Jest as our testing framework. It contains a test runner and an assertion library.
 ## Report 
-- https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/Report/PPA%2%Report.pdf
+- https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/Report/PPA%202%20Report.pdf
 
 ## Screencasts:
 
