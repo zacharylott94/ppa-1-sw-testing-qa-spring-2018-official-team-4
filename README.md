@@ -98,8 +98,42 @@ We will be programming in JavaScript
 
 ## Testing Framework
 We are using Jest as our testing framework. It contains a test runner and an assertion library.
-
+## Report 
+- https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/Report/PPA%2%Report.pdf
 ## Screencasts:
+
+
+### PPA-2
+1. Code commit initiates a build that passes - show CI Tool output
+    - https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/screencasts/Build_Test_Passed_Travis.mp4 done by [Dillon Carley](https://github.com/Dilloncarley)
+
+
+2. Code commit that violates static analysis rule --> commit that fixes the rule
+    - https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/screencasts/Static%20Analysis%20Screencast.mp4 done by [Britt Faulkner](https://github.com/brittf)
+
+
+3. Code commit that fails a unit test --> commit that fixes code to pass the test
+    - https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/screencasts/Fail-Succeed-Code.mp4 done by [Will Lee](https://github.com/henryjr1)
+
+
+4. Code commit that fails an acceptance / end-to-end test --> commit that fixes code to pass the test
+    - https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/screencasts/End2EndExample.mp4 done by [Damon Stamps](https://github.com/DStampsJr)
+
+
+5. Code running in staging environment
+    - https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/screencasts/devEnvironmentScreencast.mov done by [Zach Lott](https://github.com/zacharylott94)
+
+
+6. Smoke and manual tests in Staging
+    - https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/screencasts/Smoke%20Test.mp4 done by [Will Lee](https://github.com/henryjr1)
+
+
+7. Application pushed to production —> Smoke test production app
+    - https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-official-team-4/blob/master/screencasts/Smoke_test_production.mp4 done by [Dillon Carley](https://github.com/Dilloncarley)
+
+
+
+### PPA-1
 1. RGR screencasts:
     - https://drive.google.com/open?id=1AXhzgZYhnpe1zVcerDUGkh8qrYyVyGnm done by [Jacob Stewart](https://github.com/JacobStewart20)
     - https://drive.google.com/open?id=1VtT4ifxjyFGc_-yPc2i_LdYv40jgmhSP done by [Will Lee](https://github.com/henryjr1)
